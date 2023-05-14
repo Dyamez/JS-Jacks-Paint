@@ -3,7 +3,9 @@ function configureListeners() {
 
 
      for (var i = 0; i < images.length; i++) {        
-        // iterate over images and add mouseover event listeners      
+        // iterate over images and add mouseover event listeners    
+        document.getElementById(images[i].id).addEventListner('mouseover', addOpacity, false)
+        document.getElementById(images[i].id),addEventListner('mouseOut', removeOpacity, false)  
     } 
 }
 
