@@ -5,8 +5,8 @@ function configureListeners() {
 
      for (let i = 0; i < images.length; i++) {        
         // iterate over images and add mouseover event listeners    
-        document.getElementById(images[i].id).addEventListner('mouseover', addOpacity, false)
-        document.getElementById(images[i].id),addEventListner('mouseOut', removeOpacity, false)  
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)  
     } 
 }
 
@@ -33,63 +33,63 @@ function removeOpacity(event) {
     event.preventDefault();    
 }
 
-function getProductInfo(paintColor) {
-    let price;
+function getProductInfo(paintColor) {    
+    let price;  
     let colorName;  
     
     switch (paintColor) {
         case 'pn1':           
             // set variables for price and color name and invoke a function to update the price  
-            price = '$19.99'
+            price = '$14.99'
             colorName = 'Lime Green'
             updatePrice(colorName, price)    
             break;           
         case 'pn2':
             // set variables for price and color name and invoke a function to update the price
-            price = '$12.99'
+            price = '$11.14'
             colorName = 'Medium Brown' 
             updatePrice(colorName, price)     
             break;            
         case 'pn3':
             // set variables for price and color name and invoke a function to update the price
-            price = '$11.99'
+            price = '$22.99'
             colorName = 'Royal Blue'   
             updatePrice(colorName, price)   
             break;   
         case 'pn4':
             // set variables for price and color name and invoke a function to update the price  
-            price = '$14.99'
-            colorName = 'Bright Red'            
+            price = '$13.42'
+            colorName = 'Solid Red'            
             updatePrice(colorName, price) 
             break;   
         case 'pn5':
             // set variables for price and color name and invoke a function to update the price    
-            price = '$9.99'
+            price = '$21.98'
             colorName = 'Solid White' 
             updatePrice(colorName, price)    
             break;   
         case 'pn6':
             // set variables for price and color name and invoke a function to update the price
-            price = '$15.99'
+            price = '$4.99'
             colorName = 'Solid Black'   
             updatePrice(colorName, price)        
             break;   
         case 'pn7':
             // set variables for price and color name and invoke a function to update the price 
-            price = '$8.99'
-            colorName = 'Medium Blue'       
+            price = '$8.22'
+            colorName = 'solid cyan'       
             updatePrice(colorName, price)
             break;   
         case 'pn8':
             // set variables for price and color name and invoke a function to update the price  
-            price = '$16.99'
-            colorName = 'Light Purple'      
+            price = '$11.99'
+            colorName = 'Solid Purple'      
             updatePrice(colorName, price)  
             break;   
         case 'pn9':
             // set variables for price and color name and invoke a function to update the price 
-            price = '$17.99'
-            colorName = 'Bright Yellow'                       
+            price = '$14.99'
+            colorName = 'Solid Yellow'                       
             updatePrice(colorName, price)   
             break;   
           default:              
@@ -104,8 +104,7 @@ function getProductInfo(paintColor) {
         
         //let color =  select element with corresponding id
         //display color name
-        
-        let color = document.getElementById('color-name');
+         let color = document.getElementById('color-name');
         color.textContent = colorName;
     }
     
